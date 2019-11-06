@@ -38,5 +38,17 @@ console.log(arr2);
 console.log(arr);
 let sum = arr.reduce((total, e) => {
   return total + e;
-});
+}, 0);
 console.log(sum);
+
+let sum1 = 0;
+for (let i = 0; i < arr.length; i++) {
+  sum1+= arr[i];
+}
+console.log(sum1);
+
+let sum2 = 0;
+for (let key in arr) {
+  sum2+= arr[key];
+}
+console.log(sum2);
