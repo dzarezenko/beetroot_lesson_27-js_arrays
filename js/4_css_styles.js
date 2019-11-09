@@ -15,6 +15,10 @@ class CSSProperty {
     this.value = value;
   }
 
+  toString() {
+    return `${this.property}:${this.value};`;
+  }
+
 }
 
 let css = [
@@ -22,13 +26,14 @@ let css = [
   new CSSProperty("font-size", "16px"),
   new CSSProperty("text-align", "left"),
   new CSSProperty("text-decoration", "underline"),
+  new CSSProperty("font-weight", "bold"),
 ];
 
 let show = (text, styles) => {
   let cssStyles = "";
   for (let prop of styles) {
     //console.log(prop);
-    cssStyles+= `${prop.property}:${prop.value};`;
+    cssStyles+= prop.toString();
   }
 
   console.log(cssStyles);
