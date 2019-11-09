@@ -21,15 +21,6 @@ class CSSProperty {
 
 }
 
-let css = [
-  new CSSProperty("color", "red"),
-  new CSSProperty("font-size", "16px"),
-  new CSSProperty("text-align", "left"),
-  new CSSProperty("text-decoration", "underline"),
-  new CSSProperty("font-weight", "bold"),
-];
-//console.log(css);
-
 let show = (text, styles) => {
   let cssStyles = styles.reduce((cssStr, prop) => {
     return cssStr + prop.toString();
@@ -51,4 +42,10 @@ let show = (text, styles) => {
   document.body.appendChild(p);
 }
 
-show("Hello, World!!!", css);
+show("Hello, World!!!", [
+  new CSSProperty("color", "red"),
+  new CSSProperty("font-size", "16px"),
+  new CSSProperty("text-align", "left"),
+  new CSSProperty("text-decoration", "underline"),
+  new CSSProperty("font-weight", "bold"),
+]);
