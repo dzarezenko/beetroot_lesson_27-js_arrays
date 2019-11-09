@@ -8,23 +8,20 @@
 перечисленными в массиве.
 */
 
+class CSSProperty {
+
+  constructor(property, value) {
+    this.property = property;
+    this.value = value;
+  }
+
+}
+
 let css = [
-  {
-    property: "color",
-    value: "red",
-  },
-  {
-    property: "font-size",
-    value: "16px",
-  },
-  {
-    property: "text-align",
-    value: "left",
-  },
-  {
-    property: "text-decoration",
-    value: "underline",
-  },
+  new CSSProperty("color", "red"),
+  new CSSProperty("font-size", "16px"),
+  new CSSProperty("text-align", "left"),
+  new CSSProperty("text-decoration", "underline"),
 ];
 
 let show = (text, styles) => {
