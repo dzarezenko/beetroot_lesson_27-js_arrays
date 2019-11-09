@@ -28,6 +28,7 @@ let css = [
   new CSSProperty("text-decoration", "underline"),
   new CSSProperty("font-weight", "bold"),
 ];
+//console.log(css);
 
 let show = (text, styles) => {
   let cssStyles = styles.reduce((cssStr, prop) => {
@@ -35,7 +36,14 @@ let show = (text, styles) => {
   }, "");
 
   //console.log(cssStyles);
-  document.write(`<p style="${cssStyles}">${text}</p>`);
+  //document.write(`<p style="${cssStyles}">${text}</p>`);
+
+  let p = document.createElement("p");
+
+  p.innerText = text;
+  p.setAttribute("style", cssStyles);
+
+  document.body.appendChild(p);
 }
 
 show("Hello, World!!!", css);
