@@ -12,7 +12,12 @@ let check = [
 
 ];
 
-
+console.log(check);
+let str = "";
+for (let p of check) {
+  str+= `${p.product}: ${p.qty} = ${p.price}\n`;
+}
+alert(str);
 
 let sum=0;
 for (let i=0; i<check.length; i++) {
