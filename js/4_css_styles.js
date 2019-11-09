@@ -43,6 +43,11 @@ let show = (text, styles) => {
   p.innerText = text;
   p.setAttribute("style", cssStyles);
 
+  let link = document.createElement("a");
+  link.innerText = "Link text";
+  link.setAttribute("href", "#");
+  p.appendChild(link);
+
   document.body.appendChild(p);
 }
 
