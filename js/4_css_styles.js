@@ -30,13 +30,11 @@ let css = [
 ];
 
 let show = (text, styles) => {
-  let cssStyles = "";
-  for (let prop of styles) {
-    //console.log(prop);
-    cssStyles+= prop.toString();
-  }
+  let cssStyles = styles.reduce((cssStr, prop) => {
+    return cssStr + prop.toString();
+  }, "");
 
-  console.log(cssStyles);
+  //console.log(cssStyles);
   document.write(`<p style="${cssStyles}">${text}</p>`);
 }
 
